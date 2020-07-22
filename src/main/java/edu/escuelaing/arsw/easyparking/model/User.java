@@ -1,10 +1,9 @@
 package edu.escuelaing.arsw.easyparking.model;
 
 //Required imports
+import java.util.ArrayList;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.List;
 
 @Document(collection = "users")
 public class User {
@@ -14,14 +13,14 @@ public class User {
     private String rol;
     private String email;
     private String password;
-    private List<String> parkings;
+    private ArrayList<Parking> parkings;
 
     //Standart constructors, getters and setters
     
     public User() {
     }
     
-    public User(String name, String rol, String email, String password, List<String> parkings) {
+    public User(String name, String rol, String email, String password, ArrayList<Parking> parkings) {
         this.name = name;
         this.rol = rol;
         this.email = email;
@@ -69,11 +68,11 @@ public class User {
         this.email = email;
     }
 
-    public List<String> getParkings() {
+    public ArrayList<Parking> getParkings() {
         return parkings;
     }
 
-    public void setParkings(List<String> parkings) {
+    public void setParkings(ArrayList<Parking> parkings) {
         this.parkings = parkings;
     }
 

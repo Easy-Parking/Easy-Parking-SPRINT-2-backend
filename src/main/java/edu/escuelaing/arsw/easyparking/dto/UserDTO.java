@@ -1,6 +1,7 @@
 package edu.escuelaing.arsw.easyparking.dto;
 
-import java.util.List;
+import edu.escuelaing.arsw.easyparking.model.Parking;
+import java.util.ArrayList;
 
 public class UserDTO {
 
@@ -9,12 +10,12 @@ public class UserDTO {
     private String rol;
     private String email;
     private String password;
-    private List<String> parkings;
+    private ArrayList<Parking> parkings;
 
     public UserDTO() {
     }
     
-    public UserDTO(String id, String name, String rol, String email, String password, List<String> parkings) {
+    public UserDTO(String id, String name, String rol, String email, String password, ArrayList<Parking> parkings) {
         this.id = id;
         this.name = name;
         this.rol = rol;
@@ -63,11 +64,11 @@ public class UserDTO {
         this.email = email;
     }
 
-    public List<String> getParkings() {
+    public ArrayList<Parking> getParkings() {
         return parkings;
     }
 
-    public void setParkings(List<String> parkings) {
+    public void setParkings(ArrayList<Parking> parkings) {
         this.parkings = parkings;
     }
 
